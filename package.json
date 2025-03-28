@@ -1,0 +1,29 @@
+{
+  "name": "remelange",
+  "version": "0.1.0",
+  "description": "Experimental JS to Ocaml compiler",
+  "main": "index.js",
+  "bin": {
+    "remelange": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denys-potapov/remelange.git"
+  },
+  "keywords": [
+    "ocaml"
+  ],
+  "author": "Denys Potapov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denys-potapov/remelange/issues"
+  },
+  "homepage": "https://github.com/denys-potapov/remelange#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
