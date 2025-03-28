@@ -7,7 +7,7 @@
     "remelange": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "npx prettier . --write"
   },
   "repository": {
@@ -25,5 +25,9 @@
   "homepage": "https://github.com/denys-potapov/remelange#readme",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-typescript": "^0.23.2"
   }
 }
