@@ -30,6 +30,7 @@ Optionally format the code:
 Result `sample.ml`:
 
 ```ocaml
+(* COMPILED WITH remelange *)
 (*/*
  * Calculate the nth Fibonacci number
  */*)
@@ -41,7 +42,7 @@ Generate `*.mli` file if you want to publish as opam package:
     ocamlc -i sample.ml > sample.mli
 
 ```ocaml
-    val fib : int -> int
+val fib : int -> int
 ```
 
 ## Features

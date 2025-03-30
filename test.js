@@ -16,6 +16,7 @@ function fib(n) {
 `).trim(),
   ).toBe(
     `
+(* COMPILED WITH remelange *)
 (*/*
  * Calculate the nth Fibonacci number
  */*)

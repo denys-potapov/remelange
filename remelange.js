@@ -11,7 +11,7 @@ function remelange(jsCode) {
   const fs = require("fs");
   const tree = parser.parse(jsCode);
 
-  return nodeToOCaml(tree.rootNode);
+  return "(* COMPILED WITH remelange *)\n" + nodeToOCaml(tree.rootNode);
 }
 
 function nodeToOCaml(node) {
