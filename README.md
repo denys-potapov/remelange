@@ -4,55 +4,55 @@ A minimal JS/TS to OCaml compiler using Tree-sitter.
 
 ## Installation and usage
 
-You can run the tool without installing it globally using npx:
+Create `sample.js`
 
-    npx js-to-ocaml input.js
-
-It parses JavaScript code and outputs generated OCaml code to stdout.
-
-Write me a short readme for this tool, use npx to run samples
-JS to OCaml Compiler
-
-It parses JavaScript code, converts function names to snake_case, and generates equivalent OCaml code.
-Installation
-
-Or install dependencies manually:
-
-npm install tree-sitter tree-sitter-javascript
-
-Then run:
-
-node js_to_ocaml.js input.js
-
-Example Conversion
-JavaScript (input.js)
-
-function fibRecursive(n) {
-if (n <= 1) {
-return n;
+```javascript
+/*
+ * Calculate the nth Fibonacci number
+ */
+function fib(n) {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fib(n - 1) + fib(n - 2);
+  }
 }
-return fibRecursive(n - 1) + fibRecursive(n - 2);
-}
+```
 
-let result = fibRecursive(5);
+You can run remelange without installing using npx:
 
-Generated OCaml Output
+    npx remelange sample.js > sample.ml
 
-let rec fib_recursive n =
-if n <= 1 then n
-else fib_recursive (n - 1) + fib_recursive (n - 2)
+Optionally format the code:
 
-let result = fib_recursive 5
+    ocamlformat --enable-outside-detected-project sample.ml
+
+Result `sample.ml`:
+
+```ocaml
+(*/*
+ * Calculate the nth Fibonacci number
+ */*)
+let rec fib n = if n <= 1 then n else fib n - 1 + (fib n - 2)
+```
+
+Generate `*.mli` file if you want to publish as opam package:
+
+    ocamlc -i sample.ml > sample.mli
+
+```ocaml
+    val fib : int -> int
+```
 
 ## Features
 
-✅ (?) Parses JavaScript using Tree-sitter
+✅ Recursive function declaration
 
-✅ (?)Converts function names to snake_case
+✅ (?) Respect OCaml naming convention
 
-✅ (?)Supports function calls, variables, expressions
+✅ Supports function calls, variables, expressions
 
 ## TODO
 
-    [ ] Add support for if/else, loops, and arrays
     [ ] Improve indentation and formatting
+    [ ] Support for TS polymorphic variants

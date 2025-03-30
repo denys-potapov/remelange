@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const fs = require("fs");
+const remelange = require("./remelange");
 
 let jsCode = "";
 try {
@@ -14,10 +15,4 @@ ${err}`);
   process.exit(1);
 }
 
-console.log(jsCode);
-// const fileName =
-
-//
-
-//   const parser = new Parser();
-//   parser.setLanguage(JavaScript);
+console.log(remelange(jsCode));
