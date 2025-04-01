@@ -55,5 +55,5 @@ val fib : int -> int
 
 ## TODO
 
-[ ] Improve indentation and formatting
-[ ] Support for TS polymorphic variants
+- [ ] Improve indentation and formatting
+- [ ] Support for TS polymorphic variants
