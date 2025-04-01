@@ -49,11 +49,11 @@ val fib : int -> int
 
 ✅ Recursive function declaration
 
-✅ (?) Respect OCaml naming convention
+✅ Respect OCaml naming convention
 
 ✅ Supports function calls, variables, expressions
 
 ## TODO
 
-    [ ] Improve indentation and formatting
-    [ ] Support for TS polymorphic variants
+[ ] Improve indentation and formatting
+[ ] Support for TS polymorphic variants
